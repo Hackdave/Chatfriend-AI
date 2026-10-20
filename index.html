@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatFriend IA</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Page d'accueil -->
+  <section id="container">
+    <div class="welcome">
+      <div class="logo">CF<span>AI</span></div>
+      <h1>ChatFriend IA</h1>
+      <p class="tagline">
+        Zanmi dijital ou pou aprann, kreye ak dekouvri.
+      </p>
+      <p class="description">
+        Yon espas pou poze kesyon, aprann nouvo bagay
+        epi devlope kreyativite ou.
+      </p>
+      <button id="startButton">Komanse</button>
+    </div>
+  </section>
+
+  <!-- Espace de discussion -->
+  <section id="chatScreen" style="display: none;">
+    <header class="chat-header">
+      <div class="small-logo">CF<span>AI</span></div>
+      <div>
+        <h2>ChatFriend IA</h2>
+        <p class="status">● Disponib pou ede w</p>
+      </div>
+    </header>
+
+    <div class="chat-layout">
+      <aside class="sidebar">
+        <h3>ChatFriend IA</h3>
+        <p>Zanmi dijital ou pou aprann, kreye ak dekouvri.</p>
+        <div class="sidebar-note">
+          <strong>Sa ou ka fè</strong>
+          <p>Poze kesyon</p>
+          <p>Aprann matematik</p>
+          <p>Eksplore syans</p>
+          <p>Devlope lide ou</p>
+        </div>
+      </aside>
+
+      <main class="chat-main">
+        <div id="messages" aria-live="polite">
+          <div class="message ai">
+            Bonjou! Koman m ka edew jodia?
+          </div>
+        </div>
+
+        <div class="input-area">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Ekri mesaj ou la..."
+            autocomplete="off"
+            aria-label="Ekri mesaj ou"
+          >
+          <button id="sendButton">Voye</button>
+        </div>
+
+        <p class="small-note">
+          ChatFriend IA — Aprann, kreye, dekouvri.
+        </p>
+      </main>
+    </div>
+  </section>
+
+</body>
+</html>
