@@ -42,13 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Vider le champ de saisie
     messageInput.value = "";
 
-    // Réponse temporaire de démonstration
-    setTimeout(function () {
-      addMessage(
-        "Mèsi pou mesaj ou! ChatFriend IA poko konekte ak yon vrè entèlijans atifisyèl. N ap travay sou sa ansanm!",
-        "ai"
-      );
-    }, 500);
+    
 
     messageInput.focus();
   }
