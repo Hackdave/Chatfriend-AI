@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,6 +26,63 @@
     </div>
   </section>
 
+  <!-- Page de connexion -->
+  <section id="authScreen" style="display: none;">
+    <div class="auth-card">
+      <div class="logo">CF<span>AI</span></div>
+      <h1 id="authTitle">Byenveni sou ChatFriend IA</h1>
+      <p id="authDescription">
+        Konekte pou kontinye aprann epi dekouvri.
+      </p>
+
+      <form id="authForm">
+        <div id="nameField" style="display: none;">
+          <label for="authName">Non ou</label>
+          <input
+            type="text"
+            id="authName"
+            placeholder="Antre non ou"
+            autocomplete="name"
+          >
+        </div>
+
+        <label for="authEmail">Imel</label>
+        <input
+          type="email"
+          id="authEmail"
+          placeholder="egzanp@email.com"
+          autocomplete="email"
+          required
+        >
+
+        <label for="authPassword">Modpas</label>
+        <input
+          type="password"
+          id="authPassword"
+          placeholder="Antre modpas ou"
+          autocomplete="current-password"
+          minlength="8"
+          required
+        >
+
+        <button type="submit" id="authSubmit">
+          Konekte
+        </button>
+
+        <p id="authMessage" role="status"></p>
+      </form>
+
+      <p id="authSwitchText">Ou poko gen kont?</p>
+      <button type="button" id="authSwitchButton">
+        Kreye yon kont
+      </button>
+
+      <button type="button" id="backButton">
+        Retounen
+      </button>
+    </div>
+  </section>
+
   <!-- Espace de discussion -->
   <section id="chatScreen" style="display: none;">
     <header class="chat-header">
@@ -33,12 +91,19 @@
         <h2>ChatFriend IA</h2>
         <p class="status">● Disponib pou ede w</p>
       </div>
+      <div id="accountInfo">
+        <span id="accountName"></span>
+        <button type="button" id="logoutButton">
+          Dekonekte
+        </button>
+      </div>
     </header>
 
     <div class="chat-layout">
       <aside class="sidebar">
         <h3>ChatFriend IA</h3>
         <p>Zanmi dijital ou pou aprann, kreye ak dekouvri.</p>
+
         <div class="sidebar-note">
           <strong>Sa ou ka fè</strong>
           <p>Poze kesyon</p>
@@ -46,6 +111,12 @@
           <p>Eksplore syans</p>
           <p>Devlope lide ou</p>
         </div>
+
+        <h3>Istorik mesaj</h3>
+        <p id="historyNotice">
+          Istorik la ap disponib apre koneksyon ak baz done a.
+        </p>
+        <div id="historyList"></div>
       </aside>
 
       <main class="chat-main">
